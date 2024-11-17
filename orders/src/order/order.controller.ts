@@ -68,10 +68,9 @@ export class OrderController {
   async deleteOrder(@Param('id') orderId: string, @Response() res: any) {
     const order = await this.orderService.getOrder(orderId);
     const { bookId, quantity } = order;
+    // Step 1: Delete the order
+    await this.orderService.deleteOrder(orderId);
     try {
-      // Step 1: Delete the order
-      await this.orderService.deleteOrder(orderId);
-
       // Step 2: Try to decrease stock
       await axios.patch(`http://localhost:3002/book/${bookId}`, {
         quantity,
