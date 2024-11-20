@@ -90,12 +90,10 @@ Vous devez fournir les données suivantes dans le corps de la requête :
 
 ```json
 {
-   {
   "bookId": "id du livre",
   "customerId": "id du client",
   "quantity": 2,
   "totalPrice": 4000
-}
 }
 ```
 
