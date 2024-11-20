@@ -91,8 +91,8 @@ Vous devez fournir les données suivantes dans le corps de la requête :
 ```json
 {
    {
-  "bookId": "b9ba5f93-c1f3-4d8f-a316-dad4d334d592",
-  "customerId": "a332fe9c-63b0-4a0e-8af7-0432ae8e1315",
+  "bookId": "id du livre",
+  "customerId": "id du client",
   "quantity": 2,
   "totalPrice": 4000
 }
