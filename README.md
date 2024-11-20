@@ -76,3 +76,40 @@ DATABASE_PORT=5432
 ```
 
 Répétez cette étape pour chaque service avec les noms de base de données appropriés (`customer` et `order`).
+
+## Endpoints
+
+Pour créer un `order`, vous pouvez utiliser l'endpoint suivant :
+
+```
+POST http://localhost:3001/order
+
+```
+
+Vous devez fournir les données suivantes dans le corps de la requête :
+
+```json
+{
+   {
+  "bookId": "b9ba5f93-c1f3-4d8f-a316-dad4d334d592",
+  "customerId": "a332fe9c-63b0-4a0e-8af7-0432ae8e1315",
+  "quantity": 2,
+  "totalPrice": 4000
+}
+}
+```
+
+Note:
+
+- Vous devez ajouter manuellement des livres et des clients à les bases de données `book` et `customer` respectivement.
+  ` Vous collectez ensuite les IDs des livres et des clients crees pour les utiliser dans le corps de la requête.
+- Le paramètre bookId correspond à l'ID du livre que vous souhaitez commander, le paramètre customerId correspond à l'ID du client pour lequel vous passez la commande, et les paramètres quantity et totalPrice indiquent la quantité et le prix total du livre commandé
+
+Pour supprimer une commande, vous pouvez utiliser l'endpoint suivant :
+
+```
+DELETE http://localhost:3001/order/:id
+
+```
+
+Notez que le paramètre `id` correspond à l'ID de la commande que vous souhaitez supprimer.
