@@ -10,22 +10,27 @@ Ce projet est une API utilisant une architecture de microservices, avec des serv
 2.  **Naviguer dans les dossiers des services**  
     Exécutez les commandes suivantes dans chaque terminal :
 
-    ```cd books
+    ```
+    cd books
 
     ```
 
-    ```cd customers
+    ```
+    cd customers
 
     ```
 
-    ```cd orders
+    ```
+    cd orders
 
     ```
 
 3.  **Installation des dépendances**
     Dans chacun des dossiers de service, exécutez la commande suivante pour installer les dépendances nécessaires :
 
-        ```npm install
+        ```
+        npm install
+
         ```
 
 4.  **Lancer les services**
@@ -33,6 +38,7 @@ Ce projet est une API utilisant une architecture de microservices, avec des serv
 
         ```
         npm run start:dev
+
         ```
 
 5.  **Configuration des variables d'environnement**
@@ -49,13 +55,13 @@ DATABASE_PORT=
 
 6. **Configuration des bases de données**
 
-1. Créez trois bases de données dans votre gestionnaire de bases de données :
+   1. Créez trois bases de données dans votre gestionnaire de bases de données :
 
 - book
 - customer
 - order
 
-2. Remplacez les noms des bases de données dans la variable DATABASE_NAME des fichiers `.env` respectifs pour chaque service.
+  2. Remplacez les noms des bases de données dans la variable DATABASE_NAME des fichiers `.env` respectifs pour chaque service.
 
 _Exemple :_
 Pour le service books, le fichier `.env` pourrait ressembler à ceci :
